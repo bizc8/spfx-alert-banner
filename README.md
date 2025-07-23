@@ -56,11 +56,5 @@ Replace "YOUR-COMPONENT-ID" with the GUID from your manifest.json.
 
 Remove-PnPCustomAction -Name "AlertBanner" -Scope Web
 
-🧠 Tech Stack
-SPFx (v1.18+)
+------------------------------------------------------------------------
 
-React (optional – this project uses vanilla JS)
-
-PnP PowerShell
-
-Modern SharePoint
