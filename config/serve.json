@@ -4,7 +4,7 @@
   "https": true,
   "serveConfigurations": {
     "default": {
-      "pageUrl": "https://digitalvortex.sharepoint.com/sites/Test/_layouts/15/workbench.aspx",
+      "pageUrl": "https://YOURSITE/_layouts/15/workbench.aspx",
       "customActions": {
         "668a720f-ed09-4354-9a82-d68683e2f77c": {
           "location": "ClientSideExtension.ApplicationCustomizer",
@@ -15,7 +15,7 @@
       }
     },
     "alertBanner": {
-      "pageUrl": "https://digitalvortex.sharepoint.com/sites/Test/_layouts/15/workbench.aspx",
+      "pageUrl": "https://YOURSITE/_layouts/15/workbench.aspx",
       "customActions": {
         "668a720f-ed09-4354-9a82-d68683e2f77c": {
           "location": "ClientSideExtension.ApplicationCustomizer",
