@@ -1,0 +1,19 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "22.14.0",
+    "sdksVersions": {},
+    "version": "1.21.1",
+    "libraryName": "spo-banner",
+    "libraryId": "2d1d524f-e41d-4164-a33e-b6e65d5aa84d",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "spo-banner",
+    "solutionShortDescription": "spo-banner description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "extension",
+    "extensionType": "ApplicationCustomizer"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "alert-banner-application-customizer": {
+      "components": [
+        {
+          "entrypoint": "./lib/extensions/alertBanner/AlertBannerApplicationCustomizer.js",
+          "manifest": "./src/extensions/alertBanner/AlertBannerApplicationCustomizer.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "AlertBannerApplicationCustomizerStrings": "lib/extensions/alertBanner/loc/{locale}.js"
+  }
+}

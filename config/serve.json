@@ -1,0 +1,29 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/spfx-serve.schema.json",
+  "port": 4321,
+  "https": true,
+  "serveConfigurations": {
+    "default": {
+      "pageUrl": "https://digitalvortex.sharepoint.com/sites/Test/_layouts/15/workbench.aspx",
+      "customActions": {
+        "668a720f-ed09-4354-9a82-d68683e2f77c": {
+          "location": "ClientSideExtension.ApplicationCustomizer",
+          "properties": {
+            "message": "<strong>🚨 Migration Alert:</strong><br>This site will be <em>migrated</em> by <u>August 30th</u>."
+          }
+        }
+      }
+    },
+    "alertBanner": {
+      "pageUrl": "https://digitalvortex.sharepoint.com/sites/Test/_layouts/15/workbench.aspx",
+      "customActions": {
+        "668a720f-ed09-4354-9a82-d68683e2f77c": {
+          "location": "ClientSideExtension.ApplicationCustomizer",
+          "properties": {
+            "message": "<strong>🚨 Migration Alert:</strong><br>This site will be <em>migrated</em> by <u>August 30th</u>."
+          }
+        }
+      }
+    }
+  }
+}

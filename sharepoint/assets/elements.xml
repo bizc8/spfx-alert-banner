@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <CustomAction
+        Title="AlertBanner"
+        Location="ClientSideExtension.ApplicationCustomizer"
+        ClientSideComponentId="668a720f-ed09-4354-9a82-d68683e2f77c"
+        ClientSideComponentProperties="{&quot;testMessage&quot;:&quot;Test message&quot;}">
+    </CustomAction>
+</Elements>

@@ -1,0 +1,23 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-extension-manifest.schema.json",
+  "id": "668a72ef-e0d9-4354-9a82-d68682c3f77c",
+  "alias": "AlertBannerApplicationCustomizer",
+  "componentType": "Extension",
+  "extensionType": "ApplicationCustomizer",
+  "version": "1.0.0.0",
+  "manifestVersion": 2,
+  "requiresCustomScript": false,
+  "preconfiguredEntries": [{
+    "title": { "default": "AlertBanner" },
+    "description": { "default": "Displays a site-wide alert banner" },
+    "officeFabricIconFontName": "Warning",
+    "properties": {
+      "message": "",
+      "backgroundColor": "",
+      "textColor": "",
+      "fontSize": "",
+      "padding": "",
+      "fontFamily": ""
+    }
+  }]
+}
