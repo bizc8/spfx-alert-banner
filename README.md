@@ -1,73 +1,66 @@
-# spo-banner
+# 🚨 SPFx Alert Banner Extension
 
-## Summary
+A lightweight SharePoint Framework (SPFx) Application Customizer that injects customizable alert banners into modern SharePoint pages. Perfect for delivering time-sensitive messages, migration notices, or compliance updates to users across targeted sites.
 
-Short summary on functionality and used technologies.
+<img width="1197" height="295" alt="image" src="https://github.com/user-attachments/assets/9fdd8f1c-7646-4dd0-9ad7-d82d8d6b850a" />
+---
 
-[picture of the solution in action, if possible]
+## ✨ Features
 
-## Used SharePoint Framework Version
-
-![version](https://img.shields.io/badge/version-1.21.1-green.svg)
-
-## Applies to
-
-- [SharePoint Framework](https://aka.ms/spfx)
-- [Microsoft 365 tenant](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/set-up-your-developer-tenant)
-
-> Get your own free development tenant by subscribing to [Microsoft 365 developer program](http://aka.ms/o365devprogram)
-
-## Prerequisites
-
-> Any special pre-requisites?
-
-## Solution
-
-| Solution    | Author(s)                                               |
-| ----------- | ------------------------------------------------------- |
-| folder name | Author details (name, company, twitter alias with link) |
-
-## Version history
-
-| Version | Date             | Comments        |
-| ------- | ---------------- | --------------- |
-| 1.1     | March 10, 2021   | Update comment  |
-| 1.0     | January 29, 2021 | Initial release |
-
-## Disclaimer
-
-**THIS CODE IS PROVIDED _AS IS_ WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING ANY IMPLIED WARRANTIES OF FITNESS FOR A PARTICULAR PURPOSE, MERCHANTABILITY, OR NON-INFRINGEMENT.**
+- 🔔 Displays a banner at the top of modern SharePoint pages
+- 🎨 Fully customizable (message, background color, font, size, padding)
+- 📄 Supports multiline or rich HTML content
+- 🏷️ Enables targeted deployment via PnP `CustomAction`
+- 🧩 Deployable tenant-wide through App Catalog
 
 ---
 
-## Minimal Path to Awesome
+## 📦 How to Use
 
-- Clone this repository
-- Ensure that you are at the solution folder
-- in the command-line run:
-  - **npm install**
-  - **gulp serve**
+### 1. Clone and Install
 
-> Include any additional steps as needed.
+git clone https://github.com/bizc8/spfx-alert-banner.git
+cd spfx-alert-banner
+npm install
 
-## Features
+### 2. Build & Package
 
-Description of the extension that expands upon high-level summary above.
+gulp bundle --ship
+gulp package-solution --ship
 
-This extension illustrates the following concepts:
+### 3. Deploy to a Site
 
-- topic 1
-- topic 2
-- topic 3
+$json = @'
+{
+  "message": "Add your important tenant news here",
+  "backgroundColor": "#fff3cd",
+  "textColor": "#212529",
+  "fontSize": "12px",
+  "padding": "5px",
+  "fontFamily": "'Aptos', 'Segoe UI', sans-serif"
+}
+'@
 
-> Notice that better pictures and documentation will increase the sample usage and the value you are providing for others. Thanks for your submissions advance.
+Add-PnPCustomAction `
+  -Name "AlertBanner" `
+  -Title "AlertBanner" `
+  -Location "ClientSideExtension.ApplicationCustomizer" `
+  -ClientSideComponentId "668a72ef-e0d9-4354-9a82-d68682c3f77c" `
+  -Scope "Web" `
+  -ClientSideComponentProperties $json
 
-> Share your web part with others through Microsoft 365 Patterns and Practices program to get visibility and exposure. More details on the community, open-source projects and other activities from http://aka.ms/m365pnp.
+Replace "YOUR-COMPONENT-ID" with the GUID from your manifest.json.
 
-## References
 
-- [Getting started with SharePoint Framework](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/set-up-your-developer-tenant)
-- [Building for Microsoft teams](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/build-for-teams-overview)
-- [Use Microsoft Graph in your solution](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/get-started/using-microsoft-graph-apis)
-- [Publish SharePoint Framework applications to the Marketplace](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/publish-to-marketplace-overview)
-- [Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp) - Guidance, tooling, samples and open-source controls for your Microsoft 365 development
+### 4.To Remove Banner
+
+Remove-PnPCustomAction -Name "AlertBanner" -Scope Web
+
+🧠 Tech Stack
+SPFx (v1.18+)
+
+React (optional – this project uses vanilla JS)
+
+PnP PowerShell
+
+Modern SharePoint
