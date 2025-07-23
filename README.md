@@ -28,7 +28,18 @@ npm install
 gulp bundle --ship
 gulp package-solution --ship
 
-### 3. Deploy to a Site
+### 3. Deploy to the App Catalog
+Go to your SharePoint Admin Center
+
+Navigate to Apps > App Catalog
+
+Upload the .sppkg file to the Apps for SharePoint library
+
+When prompted, choose:
+
+✅ Enable this solution to all sites in the organization (if desired).
+
+### 4. Deploy to a Site
 
 $json = @'
 {
